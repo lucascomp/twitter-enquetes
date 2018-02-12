@@ -7,8 +7,8 @@ body {
 
 h1 {
     padding-bottom: 15px;
-    border-bottom: 1px solid #CCCCCC;
-    margin-bottom: 30px;
+    border-bottom: 3px solid white;
+    margin-bottom: 40px;
 }
 
 label {

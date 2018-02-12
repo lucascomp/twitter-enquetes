@@ -48,6 +48,7 @@ export class SurveyCreateComponent implements OnInit {
     openSurvey() {
         if (!this.formularioValido) {
             this.formDirty = true;
+            return;
         }
         const survey = {
             name: this.name,

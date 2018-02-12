@@ -46,6 +46,7 @@ class SurveyDataSource {
                             let options = [];
                             survey.options.forEach((option) => {
                                 option.votes = 0;
+                                option.votesPerHour = [0];
                                 options.push(option);
                             });
                             survey.options = options;
@@ -58,6 +59,7 @@ class SurveyDataSource {
                     let options = [];
                     survey.options.forEach((option) => {
                         option.votes = 0;
+                        option.votesPerHour = [0];
                         options.push(option);
                     });
                     survey.options = options;
@@ -71,6 +73,11 @@ class SurveyDataSource {
         this.getById(idSurvey)
             .then(survey => {
                 survey.options[index].votes++;
+                let diffHours = Math.floor(Math.abs(new Date() - new Date(survey.createdAt)) / 36e5);
+                for(let i = 0; i < diffHours - survey.options[index].votesPerHour.length; i++) {
+                    survey.options[index].votesPerHour.push(0);
+                }
+                survey.options[index].votesPerHour[diffHours]++;
                 crud.put(this.typeModel, survey)
                     .catch(() => {
                         this.voteReceived(idSurvey, index);
