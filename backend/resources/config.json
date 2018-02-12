@@ -1,0 +1,15 @@
+{
+    "basePath": "C:/twitter-enquetes",
+    "http": {
+        "port": 3000
+    },
+    "database": {
+        "survey": "surveydb"
+    },
+    "twitter": {
+        "consumer_key": "cPC6zSnNH5yXwkJAuYqaz5O0z",
+        "consumer_secret": "1HnRcfp0UkuZM0mePGSImzBmcgUSDk0jbqwtR2wjTFyzlqBGRu",
+        "access_token_key": "3064790391-D8pBFBf8RE5AhMU9Uc71pwmu675fsNM1Hm77tIH",
+        "access_token_secret": "qHSyvxcPcjo0kWb0Qs466VibIJrmWybAdYpKC3SAC5ShV"
+    }
+}

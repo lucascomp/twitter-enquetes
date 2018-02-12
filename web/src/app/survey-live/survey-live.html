@@ -1,0 +1,25 @@
+<h3 *ngIf="!survey && !showError && !finalizada && !cancelada">Carregando...</h3>
+
+<div *ngIf="survey && !finalizada && !cancelada">
+    <h3>Enquete {{survey.name}} - {{survey.description}}</h3>
+
+    <ul *ngIf="survey.options">
+        <li *ngFor="let survey of survey.options">
+            <span class="left">{{survey.description}}</span>
+            <span class="right">{{survey.votes + (survey.votes === 1 ? ' Voto' : ' Votos')}}</span>
+        </li>
+    </ul>
+
+    <div>
+        <button (click)="finish()">Finalizar Enquete</button>
+    </div>
+    <div>
+        <button (click)="cancel()">Cancelar</button>
+    </div>
+</div>
+
+<h3 *ngIf="cancelada">Enquete cancelada com sucesso! Crie uma nova <a routerLink="/create">aqui</a>.</h3>
+
+<h3 *ngIf="finalizada">Enquete finalizada com sucesso! Veja os gráficos <a routerLink="/finished">aqui</a>.</h3>
+
+<h3 *ngIf="showError">Ainda não há enquete aberta! Crie uma <a routerLink="/create">aqui</a>.</h3>

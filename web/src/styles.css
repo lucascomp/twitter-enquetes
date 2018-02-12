@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(to right, rgba(0,112,173,1) 0%, rgba(25,159,183,1) 100%);
+    text-align: center;
+    color: white;
+    font-family: Ubuntu;
+}
+
+h1 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 1.1rem;
+    width: 350px;
+    color: #EEEEEE;
+    outline-color: transparent;
+    font-weight: 100 !important;
+    text-align: center;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    background: transparent;
+    width: 250px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    font-family: Ubuntu;
+	transition: background-color 0.5s ease;
+    outline-color: transparent;
+}
+
+button:hover {
+    border: solid 1px #fff;
+	color: #0070ad;;
+	background-color: white;
+}
+
+.dirty {
+    border-bottom-color: rgb(240, 76, 76);
+}
+
+.msg-erro {
+    margin-top: 10px !important;
+}
+
+ul {
+    display: inline-block;
+    width: 25rem;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 8px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

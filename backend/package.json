@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Sistema de enquetes via Twitter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucascomp/twitter-enquetes.git"
+  },
+  "keywords": [
+    "twitter",
+    "enquetes"
+  ],
+  "author": "Lucas Alves de Sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucascomp/twitter-enquetes/issues"
+  },
+  "homepage": "https://github.com/lucascomp/twitter-enquetes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-rate-limit": "^2.11.0",
+    "lodash": "^4.17.5",
+    "pouchdb": "^6.4.3",
+    "pouchdb-adapter-memory": "^6.4.3",
+    "pouchdb-find": "^6.4.3",
+    "pouchdb-upsert": "^2.2.0",
+    "ramda": "^0.25.0",
+    "socket.io": "^2.0.4",
+    "twitter": "^1.7.1",
+    "uuid-v4": "^0.1.0"
+  }
+}

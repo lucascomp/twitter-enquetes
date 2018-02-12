@@ -1,0 +1,36 @@
+<form *ngIf="showForm && !showSucessOnCreate" (ngSubmit)="openSurvey()">
+    <div class="input-field">
+        <label for="name">Nome da Enquete<span *ngIf="formDirty && !name">*</span></label>
+        <input name="name" [(ngModel)]="name" [class.dirty]="formDirty && !name" required maxlength="24">
+    </div>
+
+    <div class="input-field">
+        <label for="description">Descrição<span *ngIf="formDirty && !description">*</span></label>
+        <input name="description" [(ngModel)]="description" [class.dirty]="formDirty && !description" required maxlength="24">
+    </div>
+
+    <div class="input-field">
+        <label for="option-one">Opção 1<span *ngIf="formDirty && !option1">*</span></label>
+        <input name="option-one" [(ngModel)]="option1" [class.dirty]="formDirty && !option1" required maxlength="24">
+    </div>
+
+    <div class="input-field">
+        <label for="option-one">Opção 2<span *ngIf="formDirty && !option2">*</span></label>
+        <input name="option-two" [(ngModel)]="option2" [class.dirty]="formDirty && !option2" required maxlength="24">
+    </div>
+
+    <div class="input-field">
+        <label for="option-one">Opção 3:</label>
+        <input name="option-three" [(ngModel)]="option3" maxlength="22">
+    </div>
+
+    <button type="submit">Abrir Enquete</button>
+    <div *ngIf="formDirty && !formularioValido" class="msg-erro">
+        <span>*Campos obrigatórios não preenchidos</span>
+    </div>
+</form>
+
+<div *ngIf="showSucessOnCreate">
+    <h3>A Enquete foi criada com sucesso!</h3>
+    <a routerLink="/live">Acompanhe em tempo real</a>
+</div>
