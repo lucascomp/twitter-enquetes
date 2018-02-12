@@ -15,7 +15,7 @@ Comece fazendo um clone deste repositório:
 
 Logo após, acesse a pasta deste repositório e execute:
 
-    cd web
+    cd backend
     npm install
     npm start
 
@@ -23,7 +23,7 @@ Após estes comandos, foi gerada uma pasta em "C://twitter-enquetes". Aqui serã
 
 Em outra instância do terminal, na mesma pasta, execute:
 
-    cd backend
+    cd web
     npm install
     npm start
 
